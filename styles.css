@@ -103,8 +103,8 @@ body::before {
 
 /* Name Terminal Container */
 .name-terminal-container {
-    max-width: 90%;
-    width: 800px;
+    max-width: 95%;
+    width: 1200px;
     margin: 0 auto;
     background: rgba(13, 17, 23, 0.95);
     border-radius: 8px;
@@ -236,19 +236,23 @@ body::before {
 /* Skills grid */
 .skills-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-wrap: nowrap;
+    gap: 10px;
     margin: 15px 0;
+    overflow-x: auto;
+    padding: 5px 0;
 }
 
 .skill {
     background: rgba(88, 166, 255, 0.1);
     color: #27ca3f;
-    padding: 6px 12px;
+    padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid rgba(88, 166, 255, 0.3);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .skill:hover {
@@ -376,6 +380,11 @@ body::before {
         width: auto;
     }
     
+    .skills-grid {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
     .section-container,
     .contact-section-container {
         margin: 0 20px;
@@ -401,12 +410,13 @@ body::before {
     }
     
     .skills-grid {
-        gap: 8px;
+        gap: 6px;
+        flex-wrap: wrap;
     }
     
     .skill {
-        font-size: 0.8rem;
-        padding: 5px 10px;
+        font-size: 0.75rem;
+        padding: 6px 12px;
     }
     
     .projects {
@@ -948,7 +958,10 @@ body::before {
     border-radius: 8px;
     padding: 30px;
     transition: all 0.3s ease;
-    height: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
 }
 
 .achievements-container .achievement-card:hover {
@@ -969,6 +982,10 @@ body::before {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .achievements-container .metric-list li {
