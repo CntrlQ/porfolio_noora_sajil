@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Connect | Noora Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="window-controls">
+                <div class="control red"></div>
+                <div class="control yellow"></div>
+                <div class="control green"></div>
+            </div>
+        </div>
+        <div class="terminal-body">
+            <div class="terminal-content">
+                <div class="prompt-line">
+                    <span class="prompt">$ contact --info</span>
+                </div>
+                <div class="output">
+                    <h1 class="page-title">Let's Connect</h1>
+                </div>
+
+                <div class="prompt-line">
+                    <span class="prompt">$ location --current</span>
+                </div>
+                <div class="output">
+                    <div class="location-info">
+                        <span class="location-icon">📍</span>
+                        <span class="location-text">San Francisco, CA</span>
+                    </div>
+                </div>
+
+                <div class="prompt-line">
+                    <span class="prompt">$ contact --email</span>
+                </div>
+                <div class="output">
+                    <div class="email-box">
+                        <a href="mailto:noora@example.com" class="email-link">noora@example.com</a>
+                    </div>
+                </div>
+
+                <div class="prompt-line">
+                    <span class="prompt">$ cat resume.pdf</span>
+                </div>
+                <div class="output">
+                    <button class="download-btn" onclick="downloadResume()">
+                        <span class="download-icon">📄</span>
+                        Download Resume
+                    </button>
+                </div>
+
+                <div class="prompt-line">
+                    <span class="prompt">$ ls ./social-links</span>
+                </div>
+                <div class="output">
+                    <div class="social-links">
+                        <a href="#" class="social-link github">
+                            <div class="social-icon">🐙</div>
+                            <div class="social-info">
+                                <div class="platform">GitHub</div>
+                                <div class="handle">@noora</div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="social-link linkedin">
+                            <div class="social-icon">💼</div>
+                            <div class="social-info">
+                                <div class="platform">LinkedIn</div>
+                                <div class="handle">Noora</div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="social-link twitter">
+                            <div class="social-icon">🐦</div>
+                            <div class="social-info">
+                                <div class="platform">Twitter</div>
+                                <div class="handle">@noora</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="prompt-line">
+                    <span class="prompt">$ send-message</span>
+                </div>
+                <div class="output">
+                    <form class="contact-form" onsubmit="sendMessage(event)">
+                        <div class="form-group">
+                            <label class="form-label">$ name:</label>
+                            <input type="text" class="form-input" name="name" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">$ email:</label>
+                            <input type="email" class="form-input" name="email" placeholder="your.email@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">$ message:</label>
+                            <textarea class="form-textarea" name="message" placeholder="Your message here..." rows="6" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="send-btn">SendMessage()</button>
+                    </form>
+                </div>
+
+                <div class="navigation">
+                    <div class="prompt-line">
+                        <span class="prompt">$ ls navigation</span>
+                    </div>
+                    <div class="nav-links">
+                        <a href="index.html" class="nav-link">← Back to Home</a>
+                        <a href="projects.html" class="nav-link">View Projects</a>
+                        <a href="achievements.html" class="nav-link">View Achievements</a>
+                    </div>
+                </div>
+
+                <div class="prompt-line current">
+                    <span class="prompt">$ </span>
+                    <span class="cursor">█</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="contact.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
