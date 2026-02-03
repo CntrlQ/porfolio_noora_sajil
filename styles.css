@@ -469,42 +469,71 @@ body::before {
 }
 
 @media (max-width: 480px) {
+    /* Scale down base font size for rem units */
+    html {
+        font-size: 14px;
+    }
+
     .name-terminal-container {
-        margin: 0 10px;
-        max-width: calc(100% - 20px);
-        width: auto;
+        margin: 0 5px;
+        max-width: calc(100% - 10px);
     }
     
     .section-container,
     .contact-section-container {
-        margin: 0 10px;
-        max-width: calc(100% - 20px);
-        width: auto;
+        margin: 0 5px;
+        max-width: calc(100% - 10px);
     }
     
-    .section-content {
-        padding: 20px;
-    }
-    
+    .section-content, 
     .terminal-body {
-        padding: 10px;
+        padding: 15px;
     }
     
     .name {
-        font-size: 1.8rem;
+        font-size: 1.5rem; /* Smaller name */
     }
     
     .title {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Make projects more compact */
+    .project-detail {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .project-detail h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
     }
     
-    .projects {
-        gap: 15px;
+    .skills-grid {
+        gap: 4px;
     }
     
+    .skill {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+
     .scroll-indicator {
         bottom: 15px;
         font-size: 0.7rem;
+    }
+    
+    /* Compact terminal prompt */
+    .prompt-line {
+        margin: 10px 0 5px 0;
+    }
+    
+    .prompt, .cursor, .output {
+        font-size: 0.85rem;
     }
 }
 
